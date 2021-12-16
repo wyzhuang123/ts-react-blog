@@ -1,0 +1,8 @@
+.slogan {
+  position: absolute;
+  left: 20px;
+}
+
+.ant-menu-item::after {
+  color: unset;
+}
