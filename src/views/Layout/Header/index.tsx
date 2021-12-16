@@ -1,10 +1,10 @@
 import React from 'react'
 import { Menu } from 'antd'
 import { createFromIconfontCN } from '@ant-design/icons'
-import './index.css'
+import './index.scss'
 
 const IconFont = createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_2963763_gqmuyfrpcun.js'
+  scriptUrl: '//at.alicdn.com/t/font_2963763_022pe4mwl481.js'
 })
 
 interface HData {

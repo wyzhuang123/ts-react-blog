@@ -1,0 +1,11 @@
+.slogan {
+  position: absolute !important;
+  left: 20px;
+}
+.slogan :hover {
+  color: unset !important;
+}
+.ant-menu-item::after {
+  color: unset !important;
+  border-bottom: unset !important;
+}

@@ -1,0 +1,14 @@
+.item-container {
+  width: 80%;
+  // background-color: red;
+  border: 1px solid gray;
+  height: 100px;
+  margin: 10px 0;
+  .item-message {
+    display: flex;
+    span {
+      margin-left: 15px;
+      margin-top: 5px;
+    }
+  }
+}
