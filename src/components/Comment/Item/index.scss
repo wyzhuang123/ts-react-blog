@@ -1,0 +1,25 @@
+.comment-item {
+  // background-color: rgba(128, 128, 128, 0.1);
+  border-radius: 5px;
+  .comment-message {
+    font-weight: 500;
+    font-size: 20px;
+    span {
+      margin: 0 10px;
+    }
+  }
+  .comment-content {
+    font-size: 16px;
+    // color: gray;
+    // font-weight: 500;
+    p {
+      margin: 6px 20px;
+    }
+  }
+  .comment-replies {
+    .more-replies {
+      color: black;
+      // pointer-events: all;
+    }
+  }
+}

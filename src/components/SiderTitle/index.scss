@@ -1,0 +1,40 @@
+.title-box {
+  position: fixed;
+  top: 450px;
+  right: 25px;
+  width: 15%;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: scroll;
+  p {
+    padding: 0 4px;
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    transition: 0.5s;
+    border-radius: 5px;
+    margin: 4px 3px;
+    line-height: 25px;
+  }
+  p:hover {
+    background-color: rgb(240, 240, 240);
+    transition: 0.5s;
+  }
+}
+
+.title-box::-webkit-scrollbar {
+  width: 3px;
+  height: 0.5px;
+  overflow: hidden;
+}
+.title-box::-webkit-scrollbar-button {
+  display: none;
+}
+.title-box::-webkit-scrollbar-thumb {
+  color: black;
+  width: 14px;
+  height: 2px;
+  background-color: rgb(58, 57, 57);
+  border-radius: 3px;
+}

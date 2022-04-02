@@ -1,31 +1,48 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import { withRouter } from 'react-router-dom'
+import RouteInterface from '@/lib/Interface/RouteInterface'
 import Item from '../Item'
-import { ArticleList } from '../../../api/article'
+import Skeleton from '@/components/Skeleton'
+import { getAllArticles } from '@/api/article'
 import './index.scss'
-const arr: number[] = [1,2,3,4,5];
 
+interface AritcleItem {
+  id: number,
+  title: string,
+  time: string,
+  content: string,
+  type: string
+}
 
-const Index: React.FC = () => {
+const Index: React.FC<RouteInterface> = (props) => {
+  const [list, setList] = useState<AritcleItem[]>([]);
   async function initData() {
     try {
-      let data = await ArticleList();     
-      console.log(); 
+      let {data} = await getAllArticles();
+      setList(data);
     } catch (error) {
     }
   }
   useEffect(() => {
     initData();
   }, [])
-
-  return (
-    <div className="list-container">
-      {
-        arr.map((item) => {
-          return <Item key={item}/>
-        })
-      }
-    </div>
-  )
+    if(!list) {
+      return (
+        <>
+          <Skeleton/>
+        </>
+      )
+    } else {
+      return (
+        <div className="list-container">
+          {
+            list.map((item) => {
+              return <Item key={item.id} {...item}/>
+            })
+          }
+        </div>
+      )
+    }
   }
 
-export default Index
+export default withRouter(Index)

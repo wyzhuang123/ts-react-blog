@@ -1,14 +1,40 @@
 .item-container {
-  width: 80%;
-  // background-color: red;
+  width: 100%;
   border: 1px solid gray;
-  height: 100px;
+  height: 80px;
   margin: 10px 0;
-  .item-message {
+  overflow: hidden;
+  transition: 0.5s;
+  border-radius: 10px;
+  .item-messages {
     display: flex;
-    span {
-      margin-left: 15px;
-      margin-top: 5px;
+    div {
+      height: 20px;
+      span {
+        margin-left: 15px;
+        margin-top: 5px;
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+  }
+  .item-title {
+    margin-top: 3px;
+    p {
+      font-weight: 600 !important;
+      font-size: 25px;
+      padding: 0 10px;
+      line-height: unset;
+      margin-bottom: 5px;
     }
   }
 }
+.item-container:hover {
+  box-shadow: 1px 1px 1px 0.5px gray, -1px -1px 1px 0.5px gray;
+  transition: 0.5s;
+}
+
+// 富文本
+// .for-preview {
+//   height: 50px;
+// }

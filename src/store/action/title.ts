@@ -1,0 +1,1 @@
+export const titleAction = (data:any) => ({type: 'titleGET', data})

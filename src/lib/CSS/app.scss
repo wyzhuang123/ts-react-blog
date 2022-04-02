@@ -1,0 +1,77 @@
+#nprogress .bar {
+  background-color: black !important;
+}
+
+// 滚动条样式
+
+html::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 5px;
+  height: 1px;
+}
+html::-webkit-scrollbar-button {
+  display: none;
+}
+html::-webkit-scrollbar-thumb {
+  color: black;
+  width: 14px;
+  height: 2px;
+  background-color: rgb(58, 57, 57);
+  border-radius: 3px;
+}
+
+// 响应式布局
+@media screen and (max-width: 450px) {
+  .sider-box,
+  .sider-title-box {
+    display: none;
+  }
+
+  .content-container {
+    width: 90% !important;
+  }
+}
+@media screen and (max-width: 250px) {
+  .content-container {
+    width: 90% !important;
+    .item-content {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .mine-ways {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .sider-p {
+    display: none;
+  }
+  .mine-ways {
+    justify-content: space-around;
+    top: 0;
+  }
+}
+
+//  动画
+
+//  路由转场动画
+.fade-enter {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-enter-active,
+.fade-exit-active {
+  opacity: 1;
+  transition: all 500ms ease-out;
+  transform: translateX(0);
+}
+
+.fade-exit {
+  opacity: 0;
+  transform: translateX(30px);
+}
